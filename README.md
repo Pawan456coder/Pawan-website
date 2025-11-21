@@ -118,6 +118,11 @@
             });
         }
     </script>
+<!-- Syntax Highlighting -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
 </head>
 <body>
 
@@ -145,10 +150,33 @@ body.light h2{color:#005577;}
 
 <!-- Skills With Code (Option A) -->
 <div class="section fade">
+    <h2>Animated Code Showcase</h2>
+    <div class="card">
+        <pre><code id="typeCode" class="language-python"></code></pre>
+    </div>
+</div>
+<script>
+let codeText = `# NeonCoder Auto-Typing Code
+for i in range(5):
+    print("Level Up!", i)`;
+let idx=0;
+function typeEffect(){
+    if(idx < codeText.length){
+        document.getElementById("typeCode").innerText += codeText[idx];
+        idx++;
+        setTimeout(typeEffect, 40);
+    }
+}
+window.onload = () => { typeEffect(); document.querySelectorAll('.fade').forEach((el,i)=>el.style.animationDelay=(i*0.3)+'s'); };
+</script>
+
+<div class="section fade">
     <h2>My Coding Skills</h2>
     <div class="grid">
-        <div class="card"><h3>Python</h3><pre style="white-space:pre-wrap;">import os
-print("Automation Ready!")</pre></div>
+        <div class="card"><img src="https://via.placeholder.com/300x150/000000/00eaff?text=File+Sorter" style="width:100%;border-radius:12px;"/><h3>File Organizer</h3></div>
+        <div class="card"><img src="https://via.placeholder.com/300x150/000000/00eaff?text=CSV+Cleaner" style="width:100%;border-radius:12px;"/><h3>CSV Cleaner</h3></div>
+        <div class="card"><img src="https://via.placeholder.com/300x150/000000/00eaff?text=AI+Image+Tool" style="width:100%;border-radius:12px;"/><h3>AI Image Maker</h3></div>
+    </div>
         <div class="card"><h3>Java</h3><pre style="white-space:pre-wrap;">class Main { public static void main(String[] a){ }}</pre></div>
         <div class="card"><h3>C++</h3><pre style="white-space:pre-wrap;">#include<iostream>
 int main(){ std::cout << "C++"; }</pre></div>
