@@ -120,13 +120,69 @@
     </script>
 </head>
 <body>
+
+<!-- Floating Navbar -->
+<nav style="position:fixed;top:0;left:0;width:100%;padding:15px;background:#000a;backdrop-filter:blur(6px);z-index:999;display:flex;justify-content:space-between;align-items:center;">
+    <div style="font-size:22px;color:#00eaff;font-weight:bold;">NeonCoder</div>
+    <button onclick="toggleMode()" style="padding:8px 18px;border-radius:8px;border:none;background:#00eaff;color:#000;font-weight:bold;cursor:pointer;">Dark/Light</button>
+</nav>
+<script>
+function toggleMode(){
+    document.body.classList.toggle('light');
+}
+</script>
+<style>
+body.light{background:#fff;color:#000;}
+body.light .card{background:#f2f2f2;color:#000;}
+body.light h2{color:#005577;}
+</style>
+
+
+<!-- Animated Code Banner (Option D) -->
+<div style="width:100%;padding:20px 0;background:#050505;box-shadow:0 0 20px #00eaff inset;overflow:hidden;white-space:nowrap;color:#00eaff;font-family:monospace;font-size:18px;">
+    <marquee scrollamount="7">def hello(): print("Hello from NeonCoder") • for i in range(10): pass • import pandas as pd • console.log('Web Dev!') • public class Main {public static void main(String[] args){ }}</marquee>
+</div>
+
+<!-- Skills With Code (Option A) -->
+<div class="section fade">
+    <h2>My Coding Skills</h2>
+    <div class="grid">
+        <div class="card"><h3>Python</h3><pre style="white-space:pre-wrap;">import os
+print("Automation Ready!")</pre></div>
+        <div class="card"><h3>Java</h3><pre style="white-space:pre-wrap;">class Main { public static void main(String[] a){ }}</pre></div>
+        <div class="card"><h3>C++</h3><pre style="white-space:pre-wrap;">#include<iostream>
+int main(){ std::cout << "C++"; }</pre></div>
+    </div>
+</div>
+
+<!-- Featured Project With Code (Option B) -->
+<div class="section fade">
+    <h2>Featured Project</h2>
+    <div class="card">
+        <h3>File Auto Sorter</h3>
+        <pre style="white-space:pre-wrap;">import shutil, os
+ext = {".png":"Images", ".txt":"Text"}
+for f in os.listdir():
+    e = os.path.splitext(f)[1]
+    if e in ext: shutil.move(f, ext[e])</pre>
+    </div>
+</div>
+
+<!-- Live Code Box (Option C) -->
+<div class="section fade">
+    <h2>Live Code Box</h2>
+    <div class="card">
+        <pre style="white-space:pre-wrap;">console.log("NeonCoder Live Box Ready!")</pre>
+    </div>
+</div>
+
 <div class="bg-animate"></div>
 
-<a id="floatWA" href="https://wa.me/919000000000">💬</a>
+<a id="floatWA" href="https://wa.me/message/A3K3YLYRSALHJ1?src=qr">💬</a>
 
 <header class="fade">
-    <img src="https://via.placeholder.com/130/000000/00eaff?text=P" style="border-radius:50%;border:3px solid #00eaff;box-shadow:0 0 20px #00eaff;" />
-    <div class="hero-title">Pawan — Developer for Hire</div>
+    <img src="https://via.placeholder.com/130/000000/00eaff?text=PG" style="border-radius:50%;border:3px solid #00eaff;box-shadow:0 0 20px #00eaff;" />
+    <div class="hero-title">NeonCoder</div>
     <div class="typing">Python • Websites • Automation • AI Tools</div>
     <a class="btn" href="#contact">Hire Me</a>
 </header>
@@ -168,14 +224,16 @@
         <input id="email" type="email" placeholder="Your Email">
         <label for="requirement">Your Requirement</label>
         <textarea id="requirement" rows="4" placeholder="Your Requirement"></textarea>
+        <label for="contactemail">My Contact Email</label>
+        <input id="contactemail" type="text" value="shreeramgoud28@gmail.com" readonly>
         <button class="btn" type="submit">Send</button>
     </form>
 </div>
 
 <footer>
     <a class="btn" href="resume.pdf" download>Download Resume</a><br><br>
-    <a class="btn" href="https://wa.me/919000000000">WhatsApp Chat</a>
-    <p>© 2025 Pawan — Coding Services</p>
+    <a class="btn" href="mailto:shreeramgoud28@gmail.com">Email Me</a>
+    <p>© 2025 NeonCoder — Coding Services</p>
 </footer>
 
 </body>
