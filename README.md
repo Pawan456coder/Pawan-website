@@ -15,16 +15,16 @@
     <script>hljs.highlightAll();</script>
 
     <style>
-        body { margin:0; font-family:'Roboto Mono', monospace; background:#000; color:#fff; overflow-x:hidden; padding-top:80px; transition:0.3s; }
+        body { margin:0; font-family:'Roboto Mono', monospace; background:#000; color:#fff; overflow-x:hidden; padding-top:100px; transition:0.3s; }
         .bg-animate { position: fixed; top:0; left:0; width:100%; height:100%; background: linear-gradient(135deg, #001f3f, #000428, #004e92); background-size:400% 400%; z-index:-1; animation: gradientShift 15s ease infinite; }
         @keyframes gradientShift {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
         .fade { opacity:0; transform:translateY(20px); animation:fadeUp 1.2s ease forwards; }
         @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
         #floatWA { position: fixed; bottom: 20px; right: 20px; width:60px; height:60px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; font-size:30px; color:white; text-decoration:none; box-shadow:0 0 15px #25D366; z-index:9999; }
-        header { padding: 100px 20px 50px; text-align:center; }
+        header { padding: 120px 20px 50px; text-align:center; }
         .hero-title { font-size:48px; font-weight:bold; color:#00eaff; }
         .typing { font-size:22px; width:0; white-space:nowrap; overflow:hidden; border-right:3px solid #00eaff; animation:typing 4s steps(40) infinite alternate; }
-        @keyframes typing { 0%{width:0;}100%{width:350px;} }
+        @keyframes typing { 0%{width:0;}100%{width:100%;} }
         .btn { padding:12px 28px; background:#00eaff; color:#000; border-radius:8px; text-decoration:none; font-size:18px; font-weight:bold; display:inline-block; margin-top:20px; cursor:pointer; }
         .section { padding:60px 20px; max-width:1100px; margin:auto; }
         h2 { font-size:32px; color:#00eaff; margin-bottom:25px; }
@@ -34,13 +34,14 @@
         form { background:#111; padding:25px; border-radius:12px; }
         input, textarea { width:100%; padding:10px; margin:10px 0; background:#1a1a1a; border:1px solid #333; color:white; border-radius:8px; }
         footer { text-align:center; padding:30px; background:#000; }
-        /* Responsive */
-        @media(max-width:600px){.grid{grid-template-columns:1fr;}.hero-title{font-size:36px;}.typing{font-size:18px;}} 
-        /* Dark/Light mode */
+        nav {position:fixed;top:0;left:0;width:100%;padding:15px;background:#000a;backdrop-filter:blur(6px);z-index:999;display:flex;justify-content:space-between;align-items:center;}
+        @media(max-width:600px){.grid{grid-template-columns:1fr;}.hero-title{font-size:36px;}.typing{font-size:18px}}
         body.light{background:#fff;color:#000;}
         body.light .card{background:#f2f2f2;color:#000;}
         body.light h2{color:#005577;}
-        nav {position:fixed;top:0;left:0;width:100%;padding:15px;background:#000a;backdrop-filter:blur(6px);z-index:999;display:flex;justify-content:space-between;align-items:center;}
+        .code-banner{width:100%;padding:25px 0;background:#050505;overflow:hidden;white-space:nowrap;color:#00eaff;font-family:monospace;font-size:18px;box-shadow:0 0 20px #00eaff inset;}
+        .project-img{width:100%;border-radius:12px;}
+        pre code{display:block;overflow-x:auto;padding:10px;border-radius:12px;background:#111;}
     </style>
 </head>
 <body>
@@ -57,12 +58,12 @@
 <header class="fade">
     <img src="https://via.placeholder.com/130/000000/00eaff?text=PG" style="border-radius:50%;border:3px solid #00eaff;box-shadow:0 0 20px #00eaff;" />
     <div class="hero-title">NeonCoder</div>
-    <div class="typing">Python • Websites • Automation • AI Tools</div>
+    <div class="typing">Python • Websites • Automation</div>
     <a class="btn" href="#contact">Hire Me</a>
 </header>
 
 <!-- Animated Code Banner -->
-<div style="width:100%;padding:20px 0;background:#050505;box-shadow:0 0 20px #00eaff inset;overflow:hidden;white-space:nowrap;color:#00eaff;font-family:monospace;font-size:18px;">
+<div class="code-banner fade">
     <marquee scrollamount="7">def hello(): print("Hello from NeonCoder") • for i in range(10): pass • import pandas as pd • console.log('Web Dev!') • public class Main {public static void main(String[] args){ }}</marquee>
 </div>
 
@@ -82,9 +83,8 @@ int main(){ std::cout << "C++"; }</code></pre></div>
 <div class="section fade">
     <h2>Featured Project</h2>
     <div class="grid">
-        <div class="card"><img src="https://via.placeholder.com/300x150/000000/00eaff?text=File+Sorter" style="width:100%;border-radius:12px;"/><h3>File Organizer</h3></div>
-        <div class="card"><img src="https://via.placeholder.com/300x150/000000/00eaff?text=CSV+Cleaner" style="width:100%;border-radius:12px;"/><h3>CSV Cleaner</h3></div>
-        <div class="card"><img src="https://via.placeholder.com/300x150/000000/00eaff?text=AI+Image+Tool" style="width:100%;border-radius:12px;"/><h3>AI Image Maker</h3></div>
+        <div class="card"><img class="project-img" src="https://via.placeholder.com/300x150/000000/00eaff?text=File+Sorter"/><h3>File Organizer</h3></div>
+        <div class="card"><img class="project-img" src="https://via.placeholder.com/300x150/000000/00eaff?text=CSV+Cleaner"/><h3>CSV Cleaner</h3></div>
     </div>
 </div>
 
