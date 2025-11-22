@@ -3,208 +3,54 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pawan | Coding Services</title>
-    <link rel="icon" href="https://via.placeholder.com/64/000000/00eaff?text=P" />
+    <title>NeonCoder | Coding Services</title>
+    <link rel="icon" href="https://via.placeholder.com/64/000000/00eaff?text=PG" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #000;
-            color: #fff;
-            overflow-x: hidden;
-        }
-        /* Animated Gradient Background */
-        .bg-animate {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: linear-gradient(135deg, #001f3f, #000428, #004e92);
-            background-size: 400% 400%;
-            z-index: -1;
-            animation: gradientShift 15s ease infinite;
-        }
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        /* Fade-in animations */
-        .fade {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeUp 1.2s ease forwards;
-        }
-        @keyframes fadeUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        /* Floating WhatsApp Button */
-        #floatWA {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: #25D366;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            color: white;
-            text-decoration: none;
-            box-shadow: 0 0 15px #25D366;
-            z-index: 9999;
-        }
-        header {
-            padding: 90px 20px;
-            text-align: center;
-        }
-        .hero-title { font-size: 48px; font-weight: bold; }
-        .typing {
-            font-size: 22px;
-            width: 0;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 3px solid #00eaff;
-            animation: typing 4s steps(40) infinite alternate;
-        }
-        @keyframes typing {
-            0% { width: 0; }
-            100% { width: 350px; }
-        }
-        .btn {
-            padding: 12px 28px;
-            background: #00eaff;
-            color: #000;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        .section {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
-        h2 { font-size: 32px; color: #00eaff; }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 25px;
-        }
-        .card {
-            background: #111;
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            transition: 0.3s;
-        }
-        .card:hover { transform: translateY(-8px); }
-        form { background: #111; padding: 25px; border-radius: 12px; }
-        input, textarea {
-            width: 100%; padding: 10px; margin: 10px 0;
-            background: #1a1a1a; border: 1px solid #333;
-            color: white; border-radius: 8px;
-        }
-        footer { text-align: center; padding: 30px; background: #000; }
+        body { margin:0; font-family:'Roboto Mono', monospace; background:#000; color:#fff; overflow-x:hidden; padding-top:80px; transition:0.3s; }
+        .bg-animate { position: fixed; top:0; left:0; width:100%; height:100%; background: linear-gradient(135deg, #001f3f, #000428, #004e92); background-size:400% 400%; z-index:-1; animation: gradientShift 15s ease infinite; }
+        @keyframes gradientShift {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+        .fade { opacity:0; transform:translateY(20px); animation:fadeUp 1.2s ease forwards; }
+        @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+        #floatWA { position: fixed; bottom: 20px; right: 20px; width:60px; height:60px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; font-size:30px; color:white; text-decoration:none; box-shadow:0 0 15px #25D366; z-index:9999; }
+        header { padding: 100px 20px 50px; text-align:center; }
+        .hero-title { font-size:48px; font-weight:bold; color:#00eaff; }
+        .typing { font-size:22px; width:0; white-space:nowrap; overflow:hidden; border-right:3px solid #00eaff; animation:typing 4s steps(40) infinite alternate; }
+        @keyframes typing { 0%{width:0;}100%{width:350px;} }
+        .btn { padding:12px 28px; background:#00eaff; color:#000; border-radius:8px; text-decoration:none; font-size:18px; font-weight:bold; display:inline-block; margin-top:20px; cursor:pointer; }
+        .section { padding:60px 20px; max-width:1100px; margin:auto; }
+        h2 { font-size:32px; color:#00eaff; margin-bottom:25px; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:25px; }
+        .card { background:#111; padding:25px; border-radius:16px; box-shadow:0 0 20px rgba(0,0,0,0.5); transition:0.3s; }
+        .card:hover { transform:translateY(-8px); }
+        form { background:#111; padding:25px; border-radius:12px; }
+        input, textarea { width:100%; padding:10px; margin:10px 0; background:#1a1a1a; border:1px solid #333; color:white; border-radius:8px; }
+        footer { text-align:center; padding:30px; background:#000; }
+        /* Responsive */
+        @media(max-width:600px){.grid{grid-template-columns:1fr;}.hero-title{font-size:36px;}.typing{font-size:18px;}} 
+        /* Dark/Light mode */
+        body.light{background:#fff;color:#000;}
+        body.light .card{background:#f2f2f2;color:#000;}
+        body.light h2{color:#005577;}
+        nav {position:fixed;top:0;left:0;width:100%;padding:15px;background:#000a;backdrop-filter:blur(6px);z-index:999;display:flex;justify-content:space-between;align-items:center;}
     </style>
-
-    <script>
-        window.onload = () => {
-            document.querySelectorAll('.fade').forEach((el, i) => {
-                el.style.animationDelay = (i * 0.3) + 's';
-            });
-        }
-    </script>
-<!-- Syntax Highlighting -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
-
 </head>
 <body>
+<div class="bg-animate"></div>
 
-<!-- Floating Navbar -->
-<nav style="position:fixed;top:0;left:0;width:100%;padding:15px;background:#000a;backdrop-filter:blur(6px);z-index:999;display:flex;justify-content:space-between;align-items:center;">
+<nav>
     <div style="font-size:22px;color:#00eaff;font-weight:bold;">NeonCoder</div>
     <button onclick="toggleMode()" style="padding:8px 18px;border-radius:8px;border:none;background:#00eaff;color:#000;font-weight:bold;cursor:pointer;">Dark/Light</button>
 </nav>
-<script>
-function toggleMode(){
-    document.body.classList.toggle('light');
-}
-</script>
-<style>
-body.light{background:#fff;color:#000;}
-body.light .card{background:#f2f2f2;color:#000;}
-body.light h2{color:#005577;}
-</style>
-
-
-<!-- Animated Code Banner (Option D) -->
-<div style="width:100%;padding:20px 0;background:#050505;box-shadow:0 0 20px #00eaff inset;overflow:hidden;white-space:nowrap;color:#00eaff;font-family:monospace;font-size:18px;">
-    <marquee scrollamount="7">def hello(): print("Hello from NeonCoder") • for i in range(10): pass • import pandas as pd • console.log('Web Dev!') • public class Main {public static void main(String[] args){ }}</marquee>
-</div>
-
-<!-- Skills With Code (Option A) -->
-<div class="section fade">
-    <h2>Animated Code Showcase</h2>
-    <div class="card">
-        <pre><code id="typeCode" class="language-python"></code></pre>
-    </div>
-</div>
-<script>
-let codeText = `# NeonCoder Auto-Typing Code
-for i in range(5):
-    print("Level Up!", i)`;
-let idx=0;
-function typeEffect(){
-    if(idx < codeText.length){
-        document.getElementById("typeCode").innerText += codeText[idx];
-        idx++;
-        setTimeout(typeEffect, 40);
-    }
-}
-window.onload = () => { typeEffect(); document.querySelectorAll('.fade').forEach((el,i)=>el.style.animationDelay=(i*0.3)+'s'); };
-</script>
-
-<div class="section fade">
-    <h2>My Coding Skills</h2>
-    <div class="grid">
-        <div class="card"><img src="https://via.placeholder.com/300x150/000000/00eaff?text=File+Sorter" style="width:100%;border-radius:12px;"/><h3>File Organizer</h3></div>
-        <div class="card"><img src="https://via.placeholder.com/300x150/000000/00eaff?text=CSV+Cleaner" style="width:100%;border-radius:12px;"/><h3>CSV Cleaner</h3></div>
-        <div class="card"><img src="https://via.placeholder.com/300x150/000000/00eaff?text=AI+Image+Tool" style="width:100%;border-radius:12px;"/><h3>AI Image Maker</h3></div>
-    </div>
-        <div class="card"><h3>Java</h3><pre style="white-space:pre-wrap;">class Main { public static void main(String[] a){ }}</pre></div>
-        <div class="card"><h3>C++</h3><pre style="white-space:pre-wrap;">#include<iostream>
-int main(){ std::cout << "C++"; }</pre></div>
-    </div>
-</div>
-
-<!-- Featured Project With Code (Option B) -->
-<div class="section fade">
-    <h2>Featured Project</h2>
-    <div class="card">
-        <h3>File Auto Sorter</h3>
-        <pre style="white-space:pre-wrap;">import shutil, os
-ext = {".png":"Images", ".txt":"Text"}
-for f in os.listdir():
-    e = os.path.splitext(f)[1]
-    if e in ext: shutil.move(f, ext[e])</pre>
-    </div>
-</div>
-
-<!-- Live Code Box (Option C) -->
-<div class="section fade">
-    <h2>Live Code Box</h2>
-    <div class="card">
-        <pre style="white-space:pre-wrap;">console.log("NeonCoder Live Box Ready!")</pre>
-    </div>
-</div>
-
-<div class="bg-animate"></div>
+<script>function toggleMode(){document.body.classList.toggle('light');}</script>
 
 <a id="floatWA" href="https://wa.me/message/A3K3YLYRSALHJ1?src=qr">💬</a>
 
@@ -215,32 +61,37 @@ for f in os.listdir():
     <a class="btn" href="#contact">Hire Me</a>
 </header>
 
+<!-- Animated Code Banner -->
+<div style="width:100%;padding:20px 0;background:#050505;box-shadow:0 0 20px #00eaff inset;overflow:hidden;white-space:nowrap;color:#00eaff;font-family:monospace;font-size:18px;">
+    <marquee scrollamount="7">def hello(): print("Hello from NeonCoder") • for i in range(10): pass • import pandas as pd • console.log('Web Dev!') • public class Main {public static void main(String[] args){ }}</marquee>
+</div>
+
+<!-- Skills With Code -->
 <div class="section fade">
-    <h2>Services</h2>
+    <h2>My Coding Skills</h2>
     <div class="grid">
-        <div class="card"><h3>Python Automation</h3><p>Scripts, tools, bots.</p></div>
-        <div class="card"><h3>Websites</h3><p>Fast, clean pages.</p></div>
-        <div class="card"><h3>Data Cleaning</h3><p>pandas-based work.</p></div>
-        <div class="card"><h3>AI Tools</h3><p>AI images/videos.</p></div>
+        <div class="card"><h3>Python</h3><pre><code class="language-python">import os
+print("Automation Ready!")</code></pre></div>
+        <div class="card"><h3>Java</h3><pre><code class="language-java">class Main { public static void main(String[] a){ }}</code></pre></div>
+        <div class="card"><h3>C++</h3><pre><code class="language-cpp">#include<iostream>
+int main(){ std::cout << "C++"; }</code></pre></div>
     </div>
 </div>
 
+<!-- Featured Project -->
 <div class="section fade">
-    <h2>Pricing</h2>
+    <h2>Featured Project</h2>
     <div class="grid">
-        <div class="card"><h3>Basic Script</h3><p>₹200–₹500</p></div>
-        <div class="card"><h3>Advanced Tool</h3><p>₹500–₹1500</p></div>
-        <div class="card"><h3>Website</h3><p>₹700–₹2500</p></div>
+        <div class="card"><img src="https://via.placeholder.com/300x150/000000/00eaff?text=File+Sorter" style="width:100%;border-radius:12px;"/><h3>File Organizer</h3></div>
+        <div class="card"><img src="https://via.placeholder.com/300x150/000000/00eaff?text=CSV+Cleaner" style="width:100%;border-radius:12px;"/><h3>CSV Cleaner</h3></div>
+        <div class="card"><img src="https://via.placeholder.com/300x150/000000/00eaff?text=AI+Image+Tool" style="width:100%;border-radius:12px;"/><h3>AI Image Maker</h3></div>
     </div>
 </div>
 
+<!-- Live Code Box -->
 <div class="section fade">
-    <h2>My Projects</h2>
-    <div class="grid">
-        <div class="card"><h3>File Organizer</h3></div>
-        <div class="card"><h3>CSV Cleaner</h3></div>
-        <div class="card"><h3>AI Image Maker</h3></div>
-    </div>
+    <h2>Live Code Box</h2>
+    <div class="card"><pre><code class="language-javascript">console.log("NeonCoder Live Box Ready!")</code></pre></div>
 </div>
 
 <div class="section fade" id="contact">
@@ -260,9 +111,16 @@ for f in os.listdir():
 
 <footer>
     <a class="btn" href="resume.pdf" download>Download Resume</a><br><br>
-    <a class="btn" href="mailto:shreeramgoud28@gmail.com">Email Me</a>
+    <a class="btn" href="https://wa.me/message/A3K3YLYRSALHJ1?src=qr">WhatsApp Chat</a>
     <p>© 2025 NeonCoder — Coding Services</p>
 </footer>
 
+<script>
+window.onload = () => {
+    document.querySelectorAll('.fade').forEach((el, i) => {
+        el.style.animationDelay = (i * 0.3) + 's';
+    });
+};
+</script>
 </body>
 </html>
