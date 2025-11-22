@@ -96,21 +96,20 @@ int main(){ std::cout << "C++"; }</code></pre></div>
 
 <div class="section fade" id="contact">
     <h2>Contact</h2>
-    <form>
+    <form action="https://formspree.io/f/xnqwnqkd" method="POST">
         <label for="name">Your Name</label>
-        <input id="name" type="text" placeholder="Your Name">
+        <input id="name" name="name" type="text" placeholder="Your Name" required>
         <label for="email">Your Email</label>
-        <input id="email" type="email" placeholder="Your Email">
+        <input id="email" name="email" type="email" placeholder="Your Email" required>
         <label for="requirement">Your Requirement</label>
-        <textarea id="requirement" rows="4" placeholder="Your Requirement"></textarea>
-        <label for="contactemail">My Contact Email</label>
-        <input id="contactemail" type="text" value="shreeramgoud28@gmail.com" readonly>
+        <textarea id="requirement" name="requirement" rows="4" placeholder="Your Requirement" required></textarea>
+        <input type="hidden" name="_replyto" value="shreeramgoud28@gmail.com">
+        <a class="btn" href="https://wa.me/message/A3K3YLYRSALHJ1?src=qr" target="_blank">WhatsApp Chat</a>
         <button class="btn" type="submit">Send</button>
     </form>
 </div>
 
 <footer>
-    <a class="btn" href="resume.pdf" download>Download Resume</a><br><br>
     <a class="btn" href="https://wa.me/message/A3K3YLYRSALHJ1?src=qr">WhatsApp Chat</a>
     <p>© 2025 NeonCoder — Coding Services</p>
 </footer>
